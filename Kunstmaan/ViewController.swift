@@ -32,7 +32,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         cell.Beschrijving1.text = maan.beschrijving
         
-        cell.Beschrijving2.text = maan.beschrijving2
+        cell.Beschrijving2.text = "€ " + maan.beschrijving2!
         
         Alamofire.request(maan.imageUrl1!).responseImage { response in
             debugPrint(response)
@@ -54,14 +54,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        UIApplication.shared.statusBarStyle = .lightContent
+    }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-         MaanTableView.rowHeight = 300
+        UIApplication.shared.statusBarStyle = .lightContent
+        
+         MaanTableView.rowHeight = 280
         Alamofire.request(URL_GET_DATA).responseJSON { response in
             
             //getting json
@@ -101,67 +105,107 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?
     {
-        let deleteAction = UIContextualAction(style: .destructive, title: "Add") { (action, view, completionHandler: (Bool) -> Void) in
+        let deleteAction = UIContextualAction(style: .destructive, title: " verwijder") { (action, view, handler) in
+            
+            
             
             self.removeAnimalAtIndex(index: indexPath.row)
             //            // "close" the swipe (1)
-            self.MaanTableView.reloadData()
+                 self.MaanTableView.reloadData()
             print("Add Action Tapped")
-            completionHandler(true)
         }
+       
+       deleteAction.backgroundColor = UIColor.orange
         
-       deleteAction.backgroundColor = UIColor(patternImage: UIImage(named: "cloudsun")!)
-        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+//        deleteAction.image = UIImage(named: "cloudsun")
+        
+                let more =
+        
+                  UIContextualAction(style: .destructive, title: "Add") { (action, view, handler) in
+                        print("Stock Picked")
+        
+                    let cell = self.MaanTableView.cellForRow(at: indexPath) as? MaanTableViewCell
+        
+        //                cell?.Beschrijving1.backgroundColor = UIColor.yellow
+        
+                        var image : UIImage = UIImage(named: "hotsun")!
+        
+                        cell?.cloudyImage?.image = image
+                    
+                    
+                }
+                more.backgroundColor = .yellow
+        
+        let less =
+            
+            UIContextualAction(style: .destructive, title: "Markeer als betaald") { (action, view, handler) in
+                print("Stock Picked")
+                
+                let cell = self.MaanTableView.cellForRow(at: indexPath) as? MaanTableViewCell
+                
+                //                cell?.Beschrijving1.backgroundColor = UIColor.yellow
+                
+                var image : UIImage = UIImage(named: "cloudy")!
+                
+                cell?.cloudyImage?.image = image
+                
+                
+        }
+        less.backgroundColor = .green
+        
+        
+        let configuration = UISwipeActionsConfiguration(actions: [more,less,deleteAction])
         return configuration
     }
-//    func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
+
+
+//        let more =
 //
+//            UITableViewRowAction(style: .normal, title: "\u{2606}\n Markeer als betaald") { action, index in
+//                print("Stock Picked")
 //
-////        let more =
-////
-////            UITableViewRowAction(style: .normal, title: "\u{2606}\n Markeer als betaald") { action, index in
-////                print("Stock Picked")
-////
-////                let cell = self.MaanTableView.cellForRow(at: index) as? MaanTableViewCell
-////
-//////                cell?.Beschrijving1.backgroundColor = UIColor.yellow
-////
-////                var image : UIImage = UIImage(named: "cloudsun")!
-////
-////                cell?.cloudyImage?.image = image
-////
-////        }
-////        more.backgroundColor = .yellow
-////
-////        let less =
-////
-////            UITableViewRowAction(style: .normal, title: "\u{2606}\n Markeer als niet gepland") { action, index in
-////                print("Stock Picked")
-////
-////                let cell = self.MaanTableView.cellForRow(at: index) as? MaanTableViewCell
-////
-////                //                cell?.Beschrijving1.backgroundColor = UIColor.yellow
-////
-////                var image : UIImage = UIImage(named: "cloudsky")!
-////
-////                cell?.cloudyImage?.image = image
-////
-////        }
-////        less.backgroundColor = UIColor.green
+//                let cell = self.MaanTableView.cellForRow(at: index) as? MaanTableViewCell
 //
+////                cell?.Beschrijving1.backgroundColor = UIColor.yellow
 //
+//                var image : UIImage = UIImage(named: "cloudsun")!
 //
-//        let deleteAction = UITableViewRowAction(style: .destructive, title: "Verwijder") { (action, indexPath) in
-//            self.removeAnimalAtIndex(index: indexPath.row)
-//            // "close" the swipe (1)
-//            self.MaanTableView.setEditing(false, animated: true)
+//                cell?.cloudyImage?.image = image
 //
-//            //handle delete
 //        }
-//        deleteAction.backgroundColor = UIColor.orange
+//        more.backgroundColor = .yellow
 //
-//        return [deleteAction]
-//    }
+//        let less =
+//
+//            UITableViewRowAction(style: .normal, title: "\u{2606}\n Markeer als niet gepland") { action, index in
+//                print("Stock Picked")
+//
+//                let cell = self.MaanTableView.cellForRow(at: index) as? MaanTableViewCell
+//
+//                //                cell?.Beschrijving1.backgroundColor = UIColor.yellow
+//
+//                var image : UIImage = UIImage(named: "cloudsky")!
+//
+//                cell?.cloudyImage?.image = image
+//
+//        }
+//        less.backgroundColor = UIColor.green
+
+
+
+        let deleteAction = UITableViewRowAction(style: .destructive, title: "Verwijder") { (action, indexPath) in
+            self.removeAnimalAtIndex(index: indexPath.row)
+            // "close" the swipe (1)
+            self.MaanTableView.setEditing(false, animated: true)
+
+            //handle delete
+        }
+        deleteAction.backgroundColor = UIColor.orange
+
+        return [deleteAction]
+    }
 
     
     
