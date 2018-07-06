@@ -98,8 +98,67 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.MaanTableView.reloadData()
         // Do any additional setup after loading the view, typically from a nib.
     }
-        
     
+    func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
+        
+        
+        let more =
+            
+            UITableViewRowAction(style: .normal, title: "\u{2606}\n Markeer als betaald") { action, index in
+                print("Stock Picked")
+                
+                let cell = self.MaanTableView.cellForRow(at: index) as? MaanTableViewCell
+                
+//                cell?.Beschrijving1.backgroundColor = UIColor.yellow
+                
+                var image : UIImage = UIImage(named: "cloudsun")!
+                
+                cell?.cloudyImage?.image = image
+                
+        }
+        more.backgroundColor = .yellow
+        
+        let less =
+            
+            UITableViewRowAction(style: .normal, title: "\u{2606}\n Markeer als niet gepland") { action, index in
+                print("Stock Picked")
+                
+                let cell = self.MaanTableView.cellForRow(at: index) as? MaanTableViewCell
+                
+                //                cell?.Beschrijving1.backgroundColor = UIColor.yellow
+                
+                var image : UIImage = UIImage(named: "cloudsky")!
+                
+                cell?.cloudyImage?.image = image
+                
+        }
+        less.backgroundColor = UIColor.green
+        
+        
+        
+        let deleteAction = UITableViewRowAction(style: .destructive, title: "Verwijder") { (action, indexPath) in
+            self.removeAnimalAtIndex(index: indexPath.row)
+            // "close" the swipe (1)
+            self.MaanTableView.setEditing(false, animated: true)
+            
+            //handle delete
+        }
+        deleteAction.backgroundColor = UIColor.orange
+        
+        return [less, more, deleteAction]
+    }
+    
+    
+    
+        
+    func removeAnimalAtIndex(index: Int) {
+        // remove the animal in the model.
+        manen.remove(at: index)
+        // fancy animation to delete the row
+        MaanTableView.beginUpdates()
+        MaanTableView.deleteRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
+        MaanTableView.endUpdates()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
