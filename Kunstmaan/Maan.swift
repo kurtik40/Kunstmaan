@@ -23,7 +23,7 @@ class Maan {
     var imageUrl2: String?
    
     
-    init(beschrijving: String?,beschrijving2:String?, imageUrl1: String?, imageUrl2: String?, imageUrl3: String?) {
+    init(beschrijving: String?,beschrijving2:String?, imageUrl1: String?, imageUrl2: String?) {
         self.beschrijving = beschrijving
         self.beschrijving2 = beschrijving2
         self.imageUrl1 = imageUrl1

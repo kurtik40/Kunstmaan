@@ -17,6 +17,7 @@
 		5F61FA3320EF77C000B99CCB /* KunstmaanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F61FA3220EF77C000B99CCB /* KunstmaanTests.swift */; };
 		5F61FA3E20EF77C000B99CCB /* KunstmaanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F61FA3D20EF77C000B99CCB /* KunstmaanUITests.swift */; };
 		5F61FA4C20EF845100B99CCB /* Maan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F61FA4B20EF845100B99CCB /* Maan.swift */; };
+		5F61FA4E20EF86EF00B99CCB /* MaanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F61FA4D20EF86EF00B99CCB /* MaanTableViewCell.swift */; };
 		DA538339B9A5CA11FBEFAA6A /* Pods_KunstmaanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED0AFC92C06DE7D2EFD0F0AD /* Pods_KunstmaanUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		5F61FA3D20EF77C000B99CCB /* KunstmaanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KunstmaanUITests.swift; sourceTree = "<group>"; };
 		5F61FA3F20EF77C000B99CCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F61FA4B20EF845100B99CCB /* Maan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maan.swift; sourceTree = "<group>"; };
+		5F61FA4D20EF86EF00B99CCB /* MaanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaanTableViewCell.swift; sourceTree = "<group>"; };
 		829824213D808A70870DE889 /* Pods-Kunstmaan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kunstmaan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kunstmaan/Pods-Kunstmaan.debug.xcconfig"; sourceTree = "<group>"; };
 		951E47AEA875086E36EEFF05 /* Pods_KunstmaanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KunstmaanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96FDFEF23694CA072B9A2075 /* Pods-KunstmaanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KunstmaanUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KunstmaanUITests/Pods-KunstmaanUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			children = (
 				5F61FA1D20EF77BE00B99CCB /* AppDelegate.swift */,
 				5F61FA1F20EF77BE00B99CCB /* ViewController.swift */,
+				5F61FA4D20EF86EF00B99CCB /* MaanTableViewCell.swift */,
 				5F61FA2120EF77BE00B99CCB /* Main.storyboard */,
 				5F61FA4B20EF845100B99CCB /* Maan.swift */,
 				5F61FA2420EF77C000B99CCB /* Assets.xcassets */,
@@ -382,6 +385,7 @@
 			files = (
 				5F61FA2020EF77BE00B99CCB /* ViewController.swift in Sources */,
 				5F61FA4C20EF845100B99CCB /* Maan.swift in Sources */,
+				5F61FA4E20EF86EF00B99CCB /* MaanTableViewCell.swift in Sources */,
 				5F61FA1E20EF77BE00B99CCB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

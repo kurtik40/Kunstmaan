@@ -11,13 +11,95 @@ import Alamofire
 import AlamofireImage
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+      let URL_GET_DATA = "https://www.cocoonplace.com/be/kunstmaan10.php"
+    
+    @IBOutlet weak var MaanTableView: UITableView!
+    
+    var manen = [Maan]()
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return manen.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath) as! MaanTableViewCell
+        
+        //getting the hero for the specified position
+        let maan: Maan
+        maan = manen[indexPath.row]
+        
+        cell.Beschrijving1.text = maan.beschrijving
+        
+        cell.Beschrijving2.text = maan.beschrijving2
+        
+        Alamofire.request(maan.imageUrl1!).responseImage { response in
+            debugPrint(response)
+            
+            if let image = response.result.value {
+                cell.AchtergrondImage.image = image
+            }
+        }
+        
+        Alamofire.request(maan.imageUrl2!).responseImage { response in
+            debugPrint(response)
+            
+            if let image = response.result.value {
+                cell.cloudyImage.image = image
+            }
+        }
+        
+        
+        return cell
+    }
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+         MaanTableView.rowHeight = 300
+        Alamofire.request(URL_GET_DATA).responseJSON { response in
+            
+            //getting json
+            if let json = response.result.value {
+                
+                //converting json to NSArray
+                let heroesArray : NSArray  = json as! NSArray
+                
+                //traversing through all elements of the array
+                for i in 0..<heroesArray.count{
+                    
+                    //adding hero values to the hero list
+                    self.manen.append(Maan(
+                        beschrijving: (heroesArray[i] as AnyObject).value(forKey: "Beschrijving") as? String,
+                        beschrijving2: (heroesArray[i] as AnyObject).value(forKey: "Beschrijving2") as? String,
+                        
+                        imageUrl1: (heroesArray[i] as AnyObject).value(forKey: "Image1") as? String,
+                        
+                        imageUrl2: (heroesArray[i] as AnyObject).value(forKey: "Image2") as? String
+                        
+                       
+                    ))
+                    
+                }
+                
+                //displaying data in tableview
+                self.MaanTableView.reloadData()
+            }
+            
+        }
+        
+        
+        
+        self.MaanTableView.reloadData()
+        // Do any additional setup after loading the view, typically from a nib.
     }
-
+        
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
