@@ -12,7 +12,7 @@
 		5F61FA1E20EF77BE00B99CCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F61FA1D20EF77BE00B99CCB /* AppDelegate.swift */; };
 		5F61FA2020EF77BE00B99CCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F61FA1F20EF77BE00B99CCB /* ViewController.swift */; };
 		5F61FA2320EF77BE00B99CCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F61FA2120EF77BE00B99CCB /* Main.storyboard */; };
-		5F61FA2520EF77C000B99CCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F61FA2420EF77C000B99CCB /* Assets.xcassets */; };
+		5F61FA2520EF77C000B99CCB /* clou.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F61FA2420EF77C000B99CCB /* clou.xcassets */; };
 		5F61FA2820EF77C000B99CCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F61FA2620EF77C000B99CCB /* LaunchScreen.storyboard */; };
 		5F61FA3320EF77C000B99CCB /* KunstmaanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F61FA3220EF77C000B99CCB /* KunstmaanTests.swift */; };
 		5F61FA3E20EF77C000B99CCB /* KunstmaanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F61FA3D20EF77C000B99CCB /* KunstmaanUITests.swift */; };
@@ -46,7 +46,7 @@
 		5F61FA1D20EF77BE00B99CCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F61FA1F20EF77BE00B99CCB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5F61FA2220EF77BE00B99CCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5F61FA2420EF77C000B99CCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5F61FA2420EF77C000B99CCB /* clou.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = clou.xcassets; sourceTree = "<group>"; };
 		5F61FA2720EF77C000B99CCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F61FA2920EF77C000B99CCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F61FA2E20EF77C000B99CCB /* KunstmaanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KunstmaanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,7 +136,7 @@
 				5F61FA4D20EF86EF00B99CCB /* MaanTableViewCell.swift */,
 				5F61FA2120EF77BE00B99CCB /* Main.storyboard */,
 				5F61FA4B20EF845100B99CCB /* Maan.swift */,
-				5F61FA2420EF77C000B99CCB /* Assets.xcassets */,
+				5F61FA2420EF77C000B99CCB /* clou.xcassets */,
 				5F61FA2620EF77C000B99CCB /* LaunchScreen.storyboard */,
 				5F61FA2920EF77C000B99CCB /* Info.plist */,
 			);
@@ -280,7 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F61FA2820EF77C000B99CCB /* LaunchScreen.storyboard in Resources */,
-				5F61FA2520EF77C000B99CCB /* Assets.xcassets in Resources */,
+				5F61FA2520EF77C000B99CCB /* clou.xcassets in Resources */,
 				5F61FA2320EF77BE00B99CCB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

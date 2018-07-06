@@ -99,55 +99,70 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
-        
-        
-        let more =
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?
+    {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Add") { (action, view, completionHandler: (Bool) -> Void) in
             
-            UITableViewRowAction(style: .normal, title: "\u{2606}\n Markeer als betaald") { action, index in
-                print("Stock Picked")
-                
-                let cell = self.MaanTableView.cellForRow(at: index) as? MaanTableViewCell
-                
-//                cell?.Beschrijving1.backgroundColor = UIColor.yellow
-                
-                var image : UIImage = UIImage(named: "cloudsun")!
-                
-                cell?.cloudyImage?.image = image
-                
-        }
-        more.backgroundColor = .yellow
-        
-        let less =
-            
-            UITableViewRowAction(style: .normal, title: "\u{2606}\n Markeer als niet gepland") { action, index in
-                print("Stock Picked")
-                
-                let cell = self.MaanTableView.cellForRow(at: index) as? MaanTableViewCell
-                
-                //                cell?.Beschrijving1.backgroundColor = UIColor.yellow
-                
-                var image : UIImage = UIImage(named: "cloudsky")!
-                
-                cell?.cloudyImage?.image = image
-                
-        }
-        less.backgroundColor = UIColor.green
-        
-        
-        
-        let deleteAction = UITableViewRowAction(style: .destructive, title: "Verwijder") { (action, indexPath) in
             self.removeAnimalAtIndex(index: indexPath.row)
-            // "close" the swipe (1)
-            self.MaanTableView.setEditing(false, animated: true)
-            
-            //handle delete
+            //            // "close" the swipe (1)
+            self.MaanTableView.reloadData()
+            print("Add Action Tapped")
+            completionHandler(true)
         }
-        deleteAction.backgroundColor = UIColor.orange
         
-        return [less, more, deleteAction]
+       deleteAction.backgroundColor = UIColor(patternImage: UIImage(named: "cloudsun")!)
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+        return configuration
     }
-    
+//    func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
+//
+//
+////        let more =
+////
+////            UITableViewRowAction(style: .normal, title: "\u{2606}\n Markeer als betaald") { action, index in
+////                print("Stock Picked")
+////
+////                let cell = self.MaanTableView.cellForRow(at: index) as? MaanTableViewCell
+////
+//////                cell?.Beschrijving1.backgroundColor = UIColor.yellow
+////
+////                var image : UIImage = UIImage(named: "cloudsun")!
+////
+////                cell?.cloudyImage?.image = image
+////
+////        }
+////        more.backgroundColor = .yellow
+////
+////        let less =
+////
+////            UITableViewRowAction(style: .normal, title: "\u{2606}\n Markeer als niet gepland") { action, index in
+////                print("Stock Picked")
+////
+////                let cell = self.MaanTableView.cellForRow(at: index) as? MaanTableViewCell
+////
+////                //                cell?.Beschrijving1.backgroundColor = UIColor.yellow
+////
+////                var image : UIImage = UIImage(named: "cloudsky")!
+////
+////                cell?.cloudyImage?.image = image
+////
+////        }
+////        less.backgroundColor = UIColor.green
+//
+//
+//
+//        let deleteAction = UITableViewRowAction(style: .destructive, title: "Verwijder") { (action, indexPath) in
+//            self.removeAnimalAtIndex(index: indexPath.row)
+//            // "close" the swipe (1)
+//            self.MaanTableView.setEditing(false, animated: true)
+//
+//            //handle delete
+//        }
+//        deleteAction.backgroundColor = UIColor.orange
+//
+//        return [deleteAction]
+//    }
+
     
     
         
