@@ -21,7 +21,7 @@ class Maan {
     var beschrijving2: String?
     var imageUrl1: String?
     var imageUrl2: String?
-   
+    var unread = false
     
     init(beschrijving: String?,beschrijving2:String?, imageUrl1: String?, imageUrl2: String?) {
         self.beschrijving = beschrijving

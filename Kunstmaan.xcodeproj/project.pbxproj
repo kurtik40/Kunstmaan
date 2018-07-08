@@ -12,12 +12,14 @@
 		5F61FA1E20EF77BE00B99CCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F61FA1D20EF77BE00B99CCB /* AppDelegate.swift */; };
 		5F61FA2020EF77BE00B99CCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F61FA1F20EF77BE00B99CCB /* ViewController.swift */; };
 		5F61FA2320EF77BE00B99CCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F61FA2120EF77BE00B99CCB /* Main.storyboard */; };
-		5F61FA2520EF77C000B99CCB /* clou.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F61FA2420EF77C000B99CCB /* clou.xcassets */; };
 		5F61FA2820EF77C000B99CCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F61FA2620EF77C000B99CCB /* LaunchScreen.storyboard */; };
 		5F61FA3320EF77C000B99CCB /* KunstmaanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F61FA3220EF77C000B99CCB /* KunstmaanTests.swift */; };
 		5F61FA3E20EF77C000B99CCB /* KunstmaanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F61FA3D20EF77C000B99CCB /* KunstmaanUITests.swift */; };
 		5F61FA4C20EF845100B99CCB /* Maan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F61FA4B20EF845100B99CCB /* Maan.swift */; };
 		5F61FA4E20EF86EF00B99CCB /* MaanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F61FA4D20EF86EF00B99CCB /* MaanTableViewCell.swift */; };
+		5F61FA5220F119A600B99CCB /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F61FA5120F119A600B99CCB /* Shared.swift */; };
+		5F61FA5420F1972000B99CCB /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F61FA5320F1971F00B99CCB /* Email.swift */; };
+		5F61FA5620F21F9100B99CCB /* clou.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F61FA5520F21F9100B99CCB /* clou.xcassets */; };
 		DA538339B9A5CA11FBEFAA6A /* Pods_KunstmaanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED0AFC92C06DE7D2EFD0F0AD /* Pods_KunstmaanUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +48,6 @@
 		5F61FA1D20EF77BE00B99CCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F61FA1F20EF77BE00B99CCB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5F61FA2220EF77BE00B99CCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5F61FA2420EF77C000B99CCB /* clou.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = clou.xcassets; sourceTree = "<group>"; };
 		5F61FA2720EF77C000B99CCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F61FA2920EF77C000B99CCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F61FA2E20EF77C000B99CCB /* KunstmaanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KunstmaanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +58,9 @@
 		5F61FA3F20EF77C000B99CCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F61FA4B20EF845100B99CCB /* Maan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maan.swift; sourceTree = "<group>"; };
 		5F61FA4D20EF86EF00B99CCB /* MaanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaanTableViewCell.swift; sourceTree = "<group>"; };
+		5F61FA5120F119A600B99CCB /* Shared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Shared.swift; path = "../../../Downloads/SwipeCellKit-develop-2/Example/MailExample/Shared.swift"; sourceTree = "<group>"; };
+		5F61FA5320F1971F00B99CCB /* Email.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Email.swift; path = "../../../Downloads/TableViewSwipeAction-master-2/TableViewSwipe/Email.swift"; sourceTree = "<group>"; };
+		5F61FA5520F21F9100B99CCB /* clou.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = clou.xcassets; path = ../../../.Trash/clou.xcassets; sourceTree = "<group>"; };
 		829824213D808A70870DE889 /* Pods-Kunstmaan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kunstmaan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kunstmaan/Pods-Kunstmaan.debug.xcconfig"; sourceTree = "<group>"; };
 		951E47AEA875086E36EEFF05 /* Pods_KunstmaanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KunstmaanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96FDFEF23694CA072B9A2075 /* Pods-KunstmaanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KunstmaanUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KunstmaanUITests/Pods-KunstmaanUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -133,10 +137,12 @@
 			children = (
 				5F61FA1D20EF77BE00B99CCB /* AppDelegate.swift */,
 				5F61FA1F20EF77BE00B99CCB /* ViewController.swift */,
+				5F61FA5320F1971F00B99CCB /* Email.swift */,
+				5F61FA5120F119A600B99CCB /* Shared.swift */,
 				5F61FA4D20EF86EF00B99CCB /* MaanTableViewCell.swift */,
 				5F61FA2120EF77BE00B99CCB /* Main.storyboard */,
+				5F61FA5520F21F9100B99CCB /* clou.xcassets */,
 				5F61FA4B20EF845100B99CCB /* Maan.swift */,
-				5F61FA2420EF77C000B99CCB /* clou.xcassets */,
 				5F61FA2620EF77C000B99CCB /* LaunchScreen.storyboard */,
 				5F61FA2920EF77C000B99CCB /* Info.plist */,
 			);
@@ -280,8 +286,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F61FA2820EF77C000B99CCB /* LaunchScreen.storyboard in Resources */,
-				5F61FA2520EF77C000B99CCB /* clou.xcassets in Resources */,
 				5F61FA2320EF77BE00B99CCB /* Main.storyboard in Resources */,
+				5F61FA5620F21F9100B99CCB /* clou.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,7 +389,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F61FA5220F119A600B99CCB /* Shared.swift in Sources */,
 				5F61FA2020EF77BE00B99CCB /* ViewController.swift in Sources */,
+				5F61FA5420F1972000B99CCB /* Email.swift in Sources */,
 				5F61FA4C20EF845100B99CCB /* Maan.swift in Sources */,
 				5F61FA4E20EF86EF00B99CCB /* MaanTableViewCell.swift in Sources */,
 				5F61FA1E20EF77BE00B99CCB /* AppDelegate.swift in Sources */,

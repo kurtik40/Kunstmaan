@@ -8,7 +8,8 @@
 
 import UIKit
 
-class MaanTableViewCell: UITableViewCell {
+
+class MaanTableViewCell: UITableViewCell  {
     
     
     @IBOutlet weak var cloudyImage: UIImageView!
@@ -32,5 +33,7 @@ class MaanTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    
 
 }
